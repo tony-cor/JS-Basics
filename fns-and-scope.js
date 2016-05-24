@@ -5,6 +5,18 @@ var name = 'Tyler';
 //If the argument you passed in is equal to 'Tyler', return true. If it's not, return false.
 
   //Code Here
+  var name = "Tyler";
+
+  function isTyler(name){
+      if (name === "Tyler"){
+        return true;
+      }
+      else{
+        return false;
+      }
+    }
+
+  //console.log(isTyler(name));
 
 //////////////////PROBLEM 2////////////////////
 
@@ -13,6 +25,10 @@ var name = 'Tyler';
 
 
   //Code Here
+  function getName(name){
+    name = prompt("What's your name?");
+    return name;
+  }
 
 
 //////////////////PROBLEM 3////////////////////
@@ -23,7 +39,10 @@ var name = 'Tyler';
 //then alerts "Welcome, " plus whatever the users name is.
 
   //Code Here
-
+function welcome(){
+  firstname = getName();
+  alert ("Welcome, " + firstname);
+}
 
 //////////////////PROBLEM 4////////////////////
 
@@ -33,6 +52,7 @@ var name = 'Tyler';
 //What is the difference between arguments and parameters?
 
   //Answer Here
+  //Arguments go into parameters.
 
 
 //////////////////PROBLEM 5////////////////////
@@ -43,7 +63,7 @@ var name = 'Tyler';
 
 
   //Answer Here
-
+ //O, null, NaN, false, "", undefined
 
 
 //////////////////PROBLEM 6////////////////////
@@ -53,15 +73,18 @@ var name = 'Tyler';
 //Create a function called myName that returns your name
 
   //Code Here
-  
+function myName(){
+  var student = "Tony";
+  return student;
+}
 
 
 //Now save the function definition of myName into a new variable called newMyName
 
   //Code Here
-
+var newMyName = myName;
 //Now alert the result of invoking newMyName
-
+alert (newMyName());
 
 
 //////////////////PROBLEM 7////////////////////
@@ -71,9 +94,15 @@ var name = 'Tyler';
 //Create a function called outerFn which returns an anonymous function which returns your name.
 
   //Code Here
-
+function outerFn(){
+    var anon = function(){
+      return "Tony";
+    }
+    return anon;
+}
 //Now save the result of invoking outerFn into a variable called innerFn.
 
   //Code Here
-
+var innerFn = outerFn();
 //Now invoke innerFn.
+innerFn();
